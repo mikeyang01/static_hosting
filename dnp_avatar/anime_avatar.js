@@ -1131,9 +1131,8 @@ async function initializeAvatar() {
     });    
     model4 = await PIXI.live2d.Live2DModel.from(cubism4Model);
     app.stage.addChild(model4);
-    model4.scale.set(0.2);
+    model4.scale.set(0.001);
     model4.x = -50;
-    model4.visible = false;
 }
 
 // 提供给main.js使用的说话函数
