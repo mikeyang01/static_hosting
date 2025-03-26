@@ -1135,10 +1135,10 @@ async function initializeAvatar() {
     model4.x = -50;
 
     // 添加静态图片
-    const nekomata = PIXI.Sprite.from('https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting/dnp/nekomata2.png');
+    const nekomata = PIXI.Sprite.from('https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting/dnp/nekomata.png');
     app.stage.addChild(nekomata);
     // 调整图片大小和位置
-    nekomata.scale.set(0.25); // 根据实际需要调整缩放比例
+    nekomata.scale.set(0.5); // 根据实际需要调整缩放比例
     nekomata.x = 0;
     nekomata.y = 0;
 }
