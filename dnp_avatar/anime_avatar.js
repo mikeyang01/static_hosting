@@ -1133,6 +1133,7 @@ async function initializeAvatar() {
     app.stage.addChild(model4);
     model4.scale.set(0.2);
     model4.x = -50;
+    model4.visible = false;
 }
 
 // 提供给main.js使用的说话函数
