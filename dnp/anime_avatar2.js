@@ -1138,9 +1138,10 @@ async function initializeAvatar() {
     const nekomata = PIXI.Sprite.from('https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting/dnp/nekomata.png');
     app.stage.addChild(nekomata);
     // 调整图片大小和位置
-    nekomata.scale.set(1); // 根据实际需要调整缩放比例
-    nekomata.x = 0;
-    nekomata.y = 0;
+    nekomata.scale.set(1);
+    // 根据实际需要调整缩放比例
+    nekomata.x = -200;
+    nekomata.y = -120;
 }
 
 // 提供给main.js使用的说话函数
