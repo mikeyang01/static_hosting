@@ -1,13 +1,15 @@
 // 引入核心库
 const script = document.createElement('script');
 script.src = 'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting/dnp/anime_core.js';
+let model4;
+const cubism4Model = "https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/no_crossed_arms/haru/haru_greeter_t03.model3.json";
+
+script.onload = () => {
+    // 脚本加载完成后再初始化
+    initializeAvatar();
+};
 document.head.appendChild(script);
 
-let model4;
-
-const cubism4Model = "https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/no_crossed_arms/haru/haru_greeter_t03.model3.json";
-// 直接初始化应用
-initializeAvatar();
 
 async function initializeAvatar() {
     const app = new PIXI.Application({
