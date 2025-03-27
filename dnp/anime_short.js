@@ -1,0 +1,43 @@
+// 引入核心库
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting/dnp/anime_core.js';
+document.head.appendChild(script);
+
+let model4;
+
+const cubism4Model = "https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/no_crossed_arms/haru/haru_greeter_t03.model3.json";
+// 直接初始化应用
+initializeAvatar();
+
+async function initializeAvatar() {
+    const app = new PIXI.Application({
+        view: document.getElementById("canvas"),
+        autoStart: true,
+        resizeTo: window,
+        backgroundAlpha: 0,
+    });    
+    model4 = await PIXI.live2d.Live2DModel.from(cubism4Model);
+    app.stage.addChild(model4);
+    model4.scale.set(0.01);
+    model4.x = -50;
+
+    // 添加静态图片
+    const nekomata = PIXI.Sprite.from('https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting/dnp/nekomata.png');
+    app.stage.addChild(nekomata);
+    // 调整图片大小和位置
+    nekomata.scale.set(0.5); // 根据实际需要调整缩放比例
+    nekomata.x = 0;
+    nekomata.y = 0;
+}
+
+// 提供给main.js使用的说话函数
+window.avatarSpeak = function(audioUrl, onFinish, onError) {
+    model4.speak(audioUrl, {
+        volume: 1,
+        expression: 4,
+        resetExpression: true,
+        crossOrigin: "anonymous",
+        onFinish: onFinish,
+        onError: onError
+    });
+};
