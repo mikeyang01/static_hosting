@@ -9,37 +9,37 @@ const script2 = document.createElement('script');
 script2.src = 'https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js';
 
 const script3 = document.createElement('script');
-script3.src = 'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/dist/index.js';
+script3.src = 'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/dist/index.js';
 
 const script4 = document.createElement('script');
-script4.src = 'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/dist/cubism2.js';
+script4.src = 'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/dist/cubism2.js';
 
 const script5 = document.createElement('script');
-script5.src = 'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/dist/cubism4.js';
+script5.src = 'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/dist/cubism4.js';
 
 let model4;
 //const cubism4Model = "lib/haru/haru_greeter_t03.model3.json";
 //const cubism4Model = "lib/natori/natori_pro_t06.model3.json"
 //const cubism4Model = "lib/simple/runtime/simple.model3.json"//需要全屏才显示
-const cubism4Model = "https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/327/327.model3.json"
+const cubism4Model = "https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/327/327.model3.json"
 
 // 预加载所有资源
 async function preloadResources() {
     const imageResources = [
-        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/327/327.4096/texture_00.png',
-        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/327/327.4096/texture_01.png'
+        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/327/327.4096/texture_00.png',
+        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/327/327.4096/texture_01.png'
     ];
 
     const jsonResources = [
-        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/327/327.physics3.json',
-        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/327/327.cdi3.json',
-        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/327/motion/1up.exp3.json',
-        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/327/motion/3loosely_folded.exp3.json',
-        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/327/motion/4cross_idle.exp3.json'
+        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/327/327.physics3.json',
+        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/327/327.cdi3.json',
+        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/327/motion/1up.exp3.json',
+        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/327/motion/3loosely_folded.exp3.json',
+        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/327/motion/4cross_idle.exp3.json'
     ];
 
     const binaryResources = [
-        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/lib/327/327.moc3'
+        'https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@remote_yumi/lib/327/327.moc3'
     ];
 
     // 预加载图片资源
