@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Digital Human</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        #canvas {
+            flex-grow: 1;
+        }
+        #modal1 {
+            max-width: 200px;
+            display: block;
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            z-index: 1000;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-right: -10px;
+        }
+        .modal-footer {
+            text-align: center;
+        }
+        .btn-floating {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1001;
+        }
+        #audioPlayer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <audio id="audioPlayer" controls></audio>
+    
+    <!-- 悬浮按钮 -->
+    <a id="recordButton" class="waves-effect waves-light btn-floating btn-large blue">
+        <i class="material-icons">mic</i>
+    </a>
+    
+    <!-- 模态窗口结构 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <p id="statusText">長押しで会話を開始💬</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="lib/local_main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化所有模态框
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+
+            // 获取欢迎模态框实例
+            var welcomeModal = M.Modal.getInstance(document.getElementById('welcomeModal'));
+
+            // 检查是否是第一次访问
+            if (!localStorage.getItem('hasVisited')) {
+                // 如果是第一次访问，打开欢迎模态框
+                welcomeModal.open();
+                // 设置标记，表示已经访问过
+                localStorage.setItem('hasVisited', 'true');
+            }
+
+            // 点击OK按钮时请求麦克风权限
+            document.getElementById('okButton').addEventListener('click', function() {
+                navigator.mediaDevices.getUserMedia({ audio: true })
+                    .then(function(stream) {
+                        console.log('麦克风权限已授予');
+                        // 可以在此处处理音频流，例如开始录音
+                    })
+                    .catch(function(err) {
+                        console.log('麦克风权限被拒绝: ' + err);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
