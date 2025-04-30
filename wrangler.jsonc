@@ -1,0 +1,13 @@
+{
+  "name": "static-hosting",
+  "compatibility_date": "2025-04-30",
+  "assets": {
+    "directory": ".",
+    "include": [
+      "index.html",
+      "spa_yumi/**/*",
+      "lib/**/*",
+      "no_crossed_arms/**/*"
+    ]
+  }
+}
