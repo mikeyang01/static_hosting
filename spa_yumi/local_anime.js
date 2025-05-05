@@ -2,17 +2,8 @@
 const script0 = document.createElement('script');
 script0.src = 'https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js';
 
-const script1 = document.createElement('script');
-script1.src = 'https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js';
-
 const script2 = document.createElement('script');
 script2.src = 'https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js';
-
-const script3 = document.createElement('script');
-script3.src = 'https://static.yangth25.workers.dev/spa_yumi/dist/index.js';
-
-const script4 = document.createElement('script');
-script4.src = 'https://static.yangth25.workers.dev/spa_yumi/dist/cubism2.js';
 
 const script5 = document.createElement('script');
 script5.src = 'https://static.yangth25.workers.dev/spa_yumi/dist/cubism4.js';
@@ -95,7 +86,7 @@ async function preloadResources() {
 
 // 确保所有脚本都加载完成后再初始化
 let loadedScripts = 0;
-const totalScripts = 6;
+const totalScripts = 3;
 
 async function checkAllScriptsLoaded() {
     loadedScripts++;
@@ -106,17 +97,11 @@ async function checkAllScriptsLoaded() {
 }
 
 script0.onload = checkAllScriptsLoaded;
-script1.onload = checkAllScriptsLoaded;
 script2.onload = checkAllScriptsLoaded;
-script3.onload = checkAllScriptsLoaded;
-script4.onload = checkAllScriptsLoaded;
 script5.onload = checkAllScriptsLoaded;
 
 document.head.appendChild(script0);
-document.head.appendChild(script1);
 document.head.appendChild(script2);
-document.head.appendChild(script3);
-document.head.appendChild(script4);
 document.head.appendChild(script5);
 
 async function initializeAvatar() {
