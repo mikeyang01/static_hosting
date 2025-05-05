@@ -1,5 +1,17 @@
 {
 	"Type": "Live2D Expression",
+	"Version": 3,
+	"Meta": {
+		"Duration": 3.0,
+		"Fps": 30.0,
+		"Loop": false,
+		"AreBeziersRestricted": true,
+		"CurveCount": 1,
+		"TotalSegmentCount": 1,
+		"TotalPointCount": 2,
+		"UserDataCount": 0,
+		"TotalUserDataSize": 0
+	},
 	"Parameters": [
 		{
 			"Id": "Param71",
