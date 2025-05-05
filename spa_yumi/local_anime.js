@@ -8,6 +8,9 @@ script2.src = 'https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js';
 const script5 = document.createElement('script');
 script5.src = 'https://static.yangth25.workers.dev/spa_yumi/dist/cubism4.js';
 
+// 开始加载第一个脚本
+document.head.appendChild(script0);
+
 let model4;
 //const cubism4Model = "lib/haru/haru_greeter_t03.model3.json";
 //const cubism4Model = "lib/natori/natori_pro_t06.model3.json"
@@ -96,13 +99,18 @@ async function checkAllScriptsLoaded() {
     }
 }
 
-script0.onload = checkAllScriptsLoaded;
-script2.onload = checkAllScriptsLoaded;
-script5.onload = checkAllScriptsLoaded;
+// 按顺序加载脚本
+script0.onload = () => {
+    checkAllScriptsLoaded();
+    document.head.appendChild(script2);
+};
 
-document.head.appendChild(script0);
-document.head.appendChild(script2);
-document.head.appendChild(script5);
+script2.onload = () => {
+    checkAllScriptsLoaded();
+    document.head.appendChild(script5);
+};
+
+script5.onload = checkAllScriptsLoaded;
 
 async function initializeAvatar() {
     if (typeof PIXI === 'undefined') {
