@@ -6,15 +6,14 @@ const script2 = document.createElement('script');
 script2.src = 'https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js';
 
 const script5 = document.createElement('script');
-script5.src = 'https://static.yangth25.workers.dev/spa_yumi/dist/cubism4.js';
+//script5.src = 'https://static.yangth25.workers.dev/spa_yumi/dist/cubism4.js';
+script5.src = 'https://cdn.jsdelivr.net/gh/RaSan147/pixi-live2d-display@v0.5.0-ls-7/dist/cubism4.min.js';
 
 // 开始加载第一个脚本
 document.head.appendChild(script0);
 
 let model4;
-//const cubism4Model = "lib/haru/haru_greeter_t03.model3.json";
-//const cubism4Model = "lib/natori/natori_pro_t06.model3.json"
-//const cubism4Model = "lib/simple/runtime/simple.model3.json"//需要全屏才显示
+//const cubism4Model = "spa_yumi/327/327.model3.json"
 const cubism4Model = "https://static.yangth25.workers.dev/spa_yumi/327/327.model3.json"
 
 // 预加载所有资源
@@ -129,7 +128,9 @@ async function initializeAvatar() {
         resizeTo: window,
         backgroundAlpha: 0,
     });    
-    model4 = await PIXI.live2d.Live2DModel.from(cubism4Model);
+    model4 = await PIXI.live2d.Live2DModel.from(cubism4Model, {
+        autoFocus: false
+    });
     app.stage.addChild(model4);
     model4.scale.set(0.1);
     model4.x = -80;

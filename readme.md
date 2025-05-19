@@ -13,3 +13,6 @@ https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/avatar_anime.min.js
 
 # 部署
 wrangler deploy
+
+# 注意
+327的云端文件地址需要重新配置
