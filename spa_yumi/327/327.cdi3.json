@@ -2,131 +2,6 @@
 	"Version": 3,
 	"Parameters": [
 		{
-			"Id": "Param51",
-			"GroupId": "",
-			"Name": "左前发物理2"
-		},
-		{
-			"Id": "Param54",
-			"GroupId": "",
-			"Name": "左前发物理3"
-		},
-		{
-			"Id": "Param55",
-			"GroupId": "",
-			"Name": "右前发物理2"
-		},
-		{
-			"Id": "Param57",
-			"GroupId": "",
-			"Name": "右前发物理3"
-		},
-		{
-			"Id": "ParamMouthX",
-			"GroupId": "",
-			"Name": "歪嘴"
-		},
-		{
-			"Id": "ParamEyeBrowX",
-			"GroupId": "",
-			"Name": "歪眉眼"
-		},
-		{
-			"Id": "ParamCheekPuff",
-			"GroupId": "",
-			"Name": "鼓嘴"
-		},
-		{
-			"Id": "ParamCheekPuff2",
-			"GroupId": "",
-			"Name": "鼓嘴透明度"
-		},
-		{
-			"Id": "ParamEyeRPhysics",
-			"GroupId": "",
-			"Name": "左眼框物理"
-		},
-		{
-			"Id": "ParamEyeBallRPhysicsX",
-			"GroupId": "",
-			"Name": "左眼玉X物理"
-		},
-		{
-			"Id": "ParamEyeBallRPhysicsZ",
-			"GroupId": "",
-			"Name": "左眼玉Z物理"
-		},
-		{
-			"Id": "ParamEyeLPhysics",
-			"GroupId": "",
-			"Name": "右眼框物理"
-		},
-		{
-			"Id": "ParamEyeBallLPhysicsX",
-			"GroupId": "",
-			"Name": "右眼玉X物理"
-		},
-		{
-			"Id": "ParamEyeBallLPhysicsZ",
-			"GroupId": "",
-			"Name": "右眼玉Z物理"
-		},
-		{
-			"Id": "ParamEyeZ",
-			"GroupId": "",
-			"Name": "眼部Z变形"
-		},
-		{
-			"Id": "ParamEyeExpression1",
-			"GroupId": "",
-			"Name": "怒-惊微表情"
-		},
-		{
-			"Id": "ParamEyeExpression2",
-			"GroupId": "",
-			"Name": "悲-喜微表情"
-		},
-		{
-			"Id": "ParamEyeBallPhysicsX",
-			"GroupId": "",
-			"Name": "眼球缓动X"
-		},
-		{
-			"Id": "ParamEyeBallPhysicsY",
-			"GroupId": "",
-			"Name": "眼球缓动Y"
-		},
-		{
-			"Id": "ParamEyeTearsPhysics",
-			"GroupId": "",
-			"Name": "眼泪运动"
-		},
-		{
-			"Id": "ParamEyeTearsPhysics2",
-			"GroupId": "",
-			"Name": "眼泪透明度"
-		},
-		{
-			"Id": "Button1",
-			"GroupId": "",
-			"Name": "发型切换"
-		},
-		{
-			"Id": "Button2",
-			"GroupId": "",
-			"Name": "黑眼圈"
-		},
-		{
-			"Id": "Button3",
-			"GroupId": "",
-			"Name": "眼泪"
-		},
-		{
-			"Id": "Button6",
-			"GroupId": "",
-			"Name": "0 0眼"
-		},
-		{
 			"Id": "Param59",
 			"GroupId": "",
 			"Name": "1"
@@ -153,6 +28,16 @@
 		},
 		{
 			"Id": "Param72",
+			"GroupId": "",
+			"Name": "1"
+		},
+		{
+			"Id": "Param73",
+			"GroupId": "",
+			"Name": "1"
+		},
+		{
+			"Id": "Param74",
 			"GroupId": "",
 			"Name": "1"
 		},
@@ -496,11 +381,27 @@
 	],
 	"Parts": [
 		{
-			"Id": "Part28",
-			"Name": "11.psd"
+			"Id": "Part26",
+			"Name": "未命名作品.psd"
+		},
+		{
+			"Id": "Part23",
+			"Name": "327.psd"
+		},
+		{
+			"Id": "Part13",
+			"Name": "327.psd"
 		},
 		{
 			"Id": "Part54",
+			"Name": "未命名作品.psd"
+		},
+		{
+			"Id": "Part51",
+			"Name": "未命名作品.psd"
+		},
+		{
+			"Id": "Part48",
 			"Name": "未命名作品.psd"
 		},
 		{
@@ -556,12 +457,28 @@
 			"Name": "部件44"
 		},
 		{
-			"Id": "fuse6",
-			"Name": "fuse"
+			"Id": "Part24",
+			"Name": "新建组"
+		},
+		{
+			"Id": "Part22",
+			"Name": "左领子"
+		},
+		{
+			"Id": "Part7",
+			"Name": "左领子"
 		},
 		{
 			"Id": "fuse5",
 			"Name": "fuse"
+		},
+		{
+			"Id": "fuse4",
+			"Name": "fuse"
+		},
+		{
+			"Id": "Part31",
+			"Name": "新建组"
 		},
 		{
 			"Id": "Part44",
@@ -604,8 +521,16 @@
 			"Name": "頭"
 		},
 		{
+			"Id": "fuse3",
+			"Name": "fuse"
+		},
+		{
 			"Id": "Part55",
 			"Name": "手臂"
+		},
+		{
+			"Id": "Part9",
+			"Name": "新建组"
 		},
 		{
 			"Id": "Part14",
@@ -765,18 +690,6 @@
 		}
 	],
 	"CombinedParameters": [
-		[
-			"ParamEyeBallRPhysicsX",
-			"ParamEyeBallRPhysicsZ"
-		],
-		[
-			"ParamEyeBallLPhysicsX",
-			"ParamEyeBallLPhysicsZ"
-		],
-		[
-			"ParamEyeBallPhysicsX",
-			"ParamEyeBallPhysicsY"
-		],
 		[
 			"ParamMouthForm",
 			"ParamMouthOpenY"

@@ -1,54 +1,36 @@
 {
 	"Version": 3,
 	"FileReferences": {
-		"Moc": "327.moc3",
-		"Textures": [
-			"327.4096/texture_00.png",
-			"327.4096/texture_01.png"
-		],
-		"Physics": "327.physics3.json",
-		"DisplayInfo": "327.cdi3.json",
-		"Motions": {
-			"Idle": [
-				{
-					"File": "motion/1up.exp3.json"
-				},
-				{
-					"File": "motion/3loosely_folded.exp3.json"
-				},
-				{
-					"File": "motion/4cross_idle.exp3.json"
-				}
-			]
-		}
+	  "Moc": "327.moc3",
+	  "Textures": [
+		"327.4096/texture_00.png",
+		"327.4096/texture_01.png"
+	  ],
+	  "Physics": "327.physics3.json",
+	  "DisplayInfo": "327.cdi3.json",
+	  "Motions": {
+		"bow": [
+		  {
+			"File": "bow.motion3.json"
+		  }
+		]
+	  }
 	},
 	"Groups": [
-		{
-			"Target": "Parameter",
-			"Name": "EyeBlink",
-			"Ids": [
-				"ParamEyeLOpen",
-				"ParamEyeLSmile",
-				"ParamEyeROpen",
-				"ParamEyeRSmile"
-			]
-		},
-		{
-			"Target": "Parameter",
-			"Name": "LipSync",
-			"Ids": [
-				"ParamMouthOpenY"
-			]
-		}
-	],
-	"HitAreas": [
-		{
-			"Id": "HitArea",
-			"Name": "Head"
-		},
-		{
-			"Id": "HitArea2",
-			"Name": "Body"
-		}
+	  {
+		"Target": "Parameter",
+		"Name": "LipSync",
+		"Ids": []
+	  },
+	  {
+		"Target": "Parameter",
+		"Name": "EyeBlink",
+		"Ids": [
+		  "ParamEyeLOpen",
+		  "ParamEyeLSmile",
+		  "ParamEyeROpen",
+		  "ParamEyeRSmile"
+		]
+	  }
 	]
-}
+  }

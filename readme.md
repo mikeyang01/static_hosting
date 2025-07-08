@@ -5,14 +5,21 @@ https://cdn.jsdelivr.net/gh/your-username/my-js-library/example.js
 https://cdn.jsdelivr.net/gh/mikeyang01/static_hosting@master/avatar_anime.min.js
 
 # 说明
-- dev文件夹: 这个是透明背景
+- dev文件夹: 
+  这个是透明背景
+  <br>
+
 - dnp文件夹: 是透明+猫
-- 最上层的avatar_anime.min.js: 是线上的, 后续无需加上min, 让jsdelivr自己加
-- no_crossed_arms文件夹: Metatech定制
-- spa_yumi: GB chan
+    anime_avatar.js anime_avatar2.js一模一样
+    anime_core.js anime_short.js 加一起是 anime_avatar2.js
+    <br>
 
-# 部署
-wrangler deploy
+- 最上层的avatar_anime.min.js: 
+  是线上的, 后续无需加上min, 让jsdelivr自己加
+<br>
 
-# 注意
-327的云端文件地址需要重新配置
+- no_crossed_arms文件夹: Metatech定制 (没有用)
+- spa_yumi: GB chan (没有用)
+
+# TODO
+迁移到cloudflare
