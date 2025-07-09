@@ -14,7 +14,7 @@ const cubism4Model = "https://cdn.jsdelivr.net/gh/guansss/pixi-live2d-display/te
 
 function notifyLoadComplete() {
     // 触发自定义事件
-    const loadCompleteEvent = new CustomEvent('animeAvatarLoaded', {
+    const loadCompleteEvent = new CustomEvent('animeModuleLoaded', {
         detail: {
             message: 'Anime avatar module loaded successfully',
             timestamp: new Date().toISOString()
@@ -22,8 +22,8 @@ function notifyLoadComplete() {
     });
     window.dispatchEvent(loadCompleteEvent);
     // 回调
-    if (window.onAnimeAvatarLoaded && typeof window.onAnimeAvatarLoaded === 'function') {
-        window.onAnimeAvatarLoaded({
+    if (window.onAnimeModuleLoaded && typeof window.onAnimeModuleLoaded === 'function') {
+        window.onAnimeModuleLoaded({
             message: 'Anime avatar module loaded successfully',
             timestamp: new Date().toISOString()
         });
